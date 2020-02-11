@@ -1,3 +1,5 @@
+<img src="https://rubyonrails.org/images/rails-logo.svg" />
+
 # README
 
 ./bin/bundle install
