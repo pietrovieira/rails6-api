@@ -1,24 +1,20 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1 align="center">
+![](https://rubyonrails.org/images/rails-logo.svg)
+</h1>
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+- ./bin/bundle install
+- ./bin/rails db:create
+- ./bin/rails db:migrate
+- ./bin/rails server
 
-* System dependencies
+## Create User:
+![](https://i.imgur.com/VJrJe3j.png)
 
-* Configuration
+## Authentication:
+![](https://i.imgur.com/yISNKjy.png)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Find All Users:
+![](https://i.imgur.com/xyctZ4g.png)

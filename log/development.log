@@ -2786,3 +2786,22 @@ Completed 201 Created in 484ms (Views: 0.4ms | ActiveRecord: 9.2ms | Allocations
 [ActiveJob] [ActiveStorage::AnalyzeJob] [5c008535-ed59-4f77-a2e5-dbfe6fa92447]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"width\":146,\"height\":146,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 1[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [5c008535-ed59-4f77-a2e5-dbfe6fa92447]   [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [5c008535-ed59-4f77-a2e5-dbfe6fa92447] Performed ActiveStorage::AnalyzeJob (Job ID: 5c008535-ed59-4f77-a2e5-dbfe6fa92447) from Async(active_storage_analysis) in 137.27ms
+Started POST "/auth/login" for ::1 at 2020-02-11 17:03:58 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"email@email.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'email@email.com' LIMIT 1[0m
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 346ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 8277)
+
+
+Started GET "/users" for ::1 at 2020-02-11 17:04:17 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 4.8ms | Allocations: 3214)
+
+
