@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @person.User_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Indentifyid:</strong>
+  <%= @person.indentifyId %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @person.birthday %>
+</p>
+
+<p>
+  <strong>Isactive:</strong>
+  <%= @person.isActive %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @person.street %>
+</p>
+
+<p>
+  <strong>Num:</strong>
+  <%= @person.num %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @person.Neighborhood_id %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @person.City_id %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @person.uf %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  User: one
+  name: MyString
+  indentifyId: MyString
+  birthday: 2020-09-01
+  isActive: false
+  street: MyString
+  num: 1
+  Neighborhood: one
+  City: one
+  uf: MyString
+
+two:
+  User: two
+  name: MyString
+  indentifyId: MyString
+  birthday: 2020-09-01
+  isActive: false
+  street: MyString
+  num: 1
+  Neighborhood: two
+  City: two
+  uf: MyString
