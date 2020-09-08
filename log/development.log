@@ -24435,3 +24435,35 @@ puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 Completed 200 OK in 449ms (Views: 0.3ms | ActiveRecord: 10.6ms | Allocations: 6167)
 
 
+Started GET "/api/v1/products.json" for 127.0.0.1 at 2020-09-08 11:43:10 -0300
+Started POST "/api/v1/auth/login" for 127.0.0.1 at 2020-09-08 11:43:10 -0300
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as JSON
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 770)
+
+
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"example@email.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'example@email.com' LIMIT 1[0m
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 555ms (Views: 0.5ms | ActiveRecord: 13.1ms | Allocations: 7511)
+
+
+Started POST "/api/v1/auth/login" for 127.0.0.1 at 2020-09-08 11:43:13 -0300
+Started GET "/api/v1/products.json" for 127.0.0.1 at 2020-09-08 11:43:13 -0300
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"example@email.com", "password"=>"[FILTERED]"}
+Processing by ProductsController#index as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'example@email.com' LIMIT 1[0m
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 976)
+
+
+Completed 200 OK in 375ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 2345)
+
+

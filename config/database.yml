@@ -40,12 +40,12 @@ development:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-DATABASE_URL="mysql2://belezaapp:Qwerty123!@mysql669.umbler.com:41890/belezaapp"
+# DATABASE_URL="mysql2://belezaapp:Qwerty123!@mysql669.umbler.com:41890/belezaapp"
 #
 # You can use this database configuration with:
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  url: "mysql2://belezaapp:Qwerty123!@mysql669.umbler.com:41890/belezaapp"
 #
 # production:
 #   <<: *default
