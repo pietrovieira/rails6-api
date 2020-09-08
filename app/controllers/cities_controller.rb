@@ -1,5 +1,4 @@
 class CitiesController < ApplicationController
-  before_action :authorize_request
   before_action :set_city, only: [:show, :edit, :update, :destroy]
 
   # GET /cities
@@ -70,6 +69,6 @@ class CitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def city_params
-      params.require(:city).permit(:label)
+      params.require(:city).permit(:label, :isActive)
     end
 end

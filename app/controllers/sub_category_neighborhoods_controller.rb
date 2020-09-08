@@ -1,5 +1,4 @@
 class SubCategoryNeighborhoodsController < ApplicationController
-  before_action :authorize_request
   before_action :set_sub_category_neighborhood, only: [:show, :edit, :update, :destroy]
 
   # GET /sub_category_neighborhoods

@@ -1,5 +1,4 @@
 class UserShippingsController < ApplicationController
-  before_action :authorize_request
   before_action :set_user_shipping, only: [:show, :edit, :update, :destroy]
 
   # GET /user_shippings

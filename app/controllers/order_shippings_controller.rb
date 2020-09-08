@@ -1,5 +1,4 @@
 class OrderShippingsController < ApplicationController
-  before_action :authorize_request
   before_action :set_order_shipping, only: [:show, :edit, :update, :destroy]
 
   # GET /order_shippings

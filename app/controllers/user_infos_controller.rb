@@ -1,5 +1,4 @@
 class UserInfosController < ApplicationController
-  before_action :authorize_request
   before_action :set_user_info, only: [:show, :edit, :update, :destroy]
 
   # GET /user_infos

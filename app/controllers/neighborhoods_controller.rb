@@ -1,5 +1,4 @@
 class NeighborhoodsController < ApplicationController
-  before_action :authorize_request
   before_action :set_neighborhood, only: [:show, :edit, :update, :destroy]
 
   # GET /neighborhoods
