@@ -45,7 +45,7 @@ development:
 # You can use this database configuration with:
 #
 production:
-  url: "mysql2://belezaapp:Qwerty123!@mysql669.umbler.com:41890/belezaapp"
+  url: "mysql2://belezaapp:belezaapp2020@mysql669.umbler.com:41890/belezaapp"
 #
 # production:
 #   <<: *default
