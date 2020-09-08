@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 9.99
+  discount: 9.99
+  shipping: 9.99
+  status: MyString
+  status_payment: MyString
+  user: one
+
+two:
+  total: 9.99
+  discount: 9.99
+  shipping: 9.99
+  status: MyString
+  status_payment: MyString
+  user: two

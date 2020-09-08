@@ -1,0 +1,1 @@
+json.partial! "sub_category_neighborhoods/sub_category_neighborhood", sub_category_neighborhood: @sub_category_neighborhood

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_shipping.order_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order_shipping.address %>
+</p>
+
+<p>
+  <strong>Num:</strong>
+  <%= @order_shipping.num %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @order_shipping.neighborhood %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @order_shipping.city %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @order_shipping.uf %>
+</p>
+
+<%= link_to 'Edit', edit_order_shipping_path(@order_shipping) %> |
+<%= link_to 'Back', order_shippings_path %>
