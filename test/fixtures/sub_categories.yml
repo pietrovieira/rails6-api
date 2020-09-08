@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  category: one
   label: MyString
-  active: false
+  slug: MyString
+  isActive: false
   description: MyText
+  category: one
 
 two:
-  category: two
   label: MyString
-  active: false
+  slug: MyString
+  isActive: false
   description: MyText
+  category: two

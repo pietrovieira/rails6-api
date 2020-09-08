@@ -14,7 +14,7 @@ class NeighborhoodsTest < ApplicationSystemTestCase
     visit neighborhoods_url
     click_on "New Neighborhood"
 
-    fill_in "City", with: @neighborhood.City_id
+    fill_in "City", with: @neighborhood.city_id
     check "Isactive" if @neighborhood.isActive
     check "Isdelivery" if @neighborhood.isDelivery
     fill_in "Label", with: @neighborhood.label
@@ -28,7 +28,7 @@ class NeighborhoodsTest < ApplicationSystemTestCase
     visit neighborhoods_url
     click_on "Edit", match: :first
 
-    fill_in "City", with: @neighborhood.City_id
+    fill_in "City", with: @neighborhood.city_id
     check "Isactive" if @neighborhood.isActive
     check "Isdelivery" if @neighborhood.isDelivery
     fill_in "Label", with: @neighborhood.label

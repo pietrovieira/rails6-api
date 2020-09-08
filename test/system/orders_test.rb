@@ -14,9 +14,12 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "New Order"
 
-    fill_in "Person", with: @order.Person_id
+    fill_in "Discount", with: @order.discount
+    fill_in "Shipping", with: @order.shipping
     fill_in "Status", with: @order.status
+    fill_in "Status payment", with: @order.status_payment
     fill_in "Total", with: @order.total
+    fill_in "User", with: @order.user_id
     click_on "Create Order"
 
     assert_text "Order was successfully created"
@@ -27,9 +30,12 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "Edit", match: :first
 
-    fill_in "Person", with: @order.Person_id
+    fill_in "Discount", with: @order.discount
+    fill_in "Shipping", with: @order.shipping
     fill_in "Status", with: @order.status
+    fill_in "Status payment", with: @order.status_payment
     fill_in "Total", with: @order.total
+    fill_in "User", with: @order.user_id
     click_on "Update Order"
 
     assert_text "Order was successfully updated"

@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  SubCategory: one
-  Neighborhood: one
+  sub_category: one
+  neighborhood: one
+  price: 9.99
 
 two:
-  SubCategory: two
-  Neighborhood: two
+  sub_category: two
+  neighborhood: two
+  price: 9.99

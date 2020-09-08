@@ -14,9 +14,10 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "New Category"
 
-    check "Active" if @category.active
     fill_in "Description", with: @category.description
+    check "Isactive" if @category.isActive
     fill_in "Label", with: @category.label
+    fill_in "Slug", with: @category.slug
     click_on "Create Category"
 
     assert_text "Category was successfully created"
@@ -27,9 +28,10 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "Edit", match: :first
 
-    check "Active" if @category.active
     fill_in "Description", with: @category.description
+    check "Isactive" if @category.isActive
     fill_in "Label", with: @category.label
+    fill_in "Slug", with: @category.slug
     click_on "Update Category"
 
     assert_text "Category was successfully updated"

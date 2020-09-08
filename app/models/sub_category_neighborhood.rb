@@ -1,4 +1,4 @@
 class SubCategoryNeighborhood < ApplicationRecord
-  belongs_to :SubCategory
-  belongs_to :Neighborhood
+  belongs_to :sub_category
+  belongs_to :neighborhood
 end

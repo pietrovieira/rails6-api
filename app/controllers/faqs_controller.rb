@@ -1,4 +1,5 @@
 class FaqsController < ApplicationController
+  before_action :authorize_request
   before_action :set_faq, only: [:show, :edit, :update, :destroy]
 
   # GET /faqs

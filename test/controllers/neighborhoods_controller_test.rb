@@ -17,7 +17,7 @@ class NeighborhoodsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create neighborhood" do
     assert_difference('Neighborhood.count') do
-      post neighborhoods_url, params: { neighborhood: { City_id: @neighborhood.City_id, isActive: @neighborhood.isActive, isDelivery: @neighborhood.isDelivery, label: @neighborhood.label } }
+      post neighborhoods_url, params: { neighborhood: { city_id: @neighborhood.city_id, isActive: @neighborhood.isActive, isDelivery: @neighborhood.isDelivery, label: @neighborhood.label } }
     end
 
     assert_redirected_to neighborhood_url(Neighborhood.last)
@@ -34,7 +34,7 @@ class NeighborhoodsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update neighborhood" do
-    patch neighborhood_url(@neighborhood), params: { neighborhood: { City_id: @neighborhood.City_id, isActive: @neighborhood.isActive, isDelivery: @neighborhood.isDelivery, label: @neighborhood.label } }
+    patch neighborhood_url(@neighborhood), params: { neighborhood: { city_id: @neighborhood.city_id, isActive: @neighborhood.isActive, isDelivery: @neighborhood.isDelivery, label: @neighborhood.label } }
     assert_redirected_to neighborhood_url(@neighborhood)
   end
 

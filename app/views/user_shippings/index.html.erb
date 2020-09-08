@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Shippings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zipcode</th>
+      <th>Address</th>
+      <th>Num</th>
+      <th>User</th>
+      <th>Neighborhood</th>
+      <th>City</th>
+      <th>Uf</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_shippings.each do |user_shipping| %>
+      <tr>
+        <td><%= user_shipping.zipcode %></td>
+        <td><%= user_shipping.address %></td>
+        <td><%= user_shipping.num %></td>
+        <td><%= user_shipping.user_id %></td>
+        <td><%= user_shipping.neighborhood_id %></td>
+        <td><%= user_shipping.city_id %></td>
+        <td><%= user_shipping.uf %></td>
+        <td><%= user_shipping.lat %></td>
+        <td><%= user_shipping.long %></td>
+        <td><%= link_to 'Show', user_shipping %></td>
+        <td><%= link_to 'Edit', edit_user_shipping_path(user_shipping) %></td>
+        <td><%= link_to 'Destroy', user_shipping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Shipping', new_user_shipping_path %>

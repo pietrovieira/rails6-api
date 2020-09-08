@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sub category:</strong>
+  <%= @sub_category_neighborhood.sub_category_id %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @sub_category_neighborhood.neighborhood_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sub_category_neighborhood.price %>
+</p>
+
+<%= link_to 'Edit', edit_sub_category_neighborhood_path(@sub_category_neighborhood) %> |
+<%= link_to 'Back', sub_category_neighborhoods_path %>

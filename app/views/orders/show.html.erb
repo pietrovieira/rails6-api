@@ -6,13 +6,28 @@
 </p>
 
 <p>
+  <strong>Discount:</strong>
+  <%= @order.discount %>
+</p>
+
+<p>
+  <strong>Shipping:</strong>
+  <%= @order.shipping %>
+</p>
+
+<p>
   <strong>Status:</strong>
   <%= @order.status %>
 </p>
 
 <p>
-  <strong>Person:</strong>
-  <%= @order.Person_id %>
+  <strong>Status payment:</strong>
+  <%= @order.status_payment %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |

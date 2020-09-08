@@ -1,4 +1,5 @@
 class NeighborhoodsController < ApplicationController
+  before_action :authorize_request
   before_action :set_neighborhood, only: [:show, :edit, :update, :destroy]
 
   # GET /neighborhoods
@@ -69,6 +70,6 @@ class NeighborhoodsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def neighborhood_params
-      params.require(:neighborhood).permit(:label, :isActive, :isDelivery, :City_id)
+      params.require(:neighborhood).permit(:label, :isActive, :isDelivery, :city_id)
     end
 end

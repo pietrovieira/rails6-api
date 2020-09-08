@@ -14,9 +14,10 @@ class OrderProductsTest < ApplicationSystemTestCase
     visit order_products_url
     click_on "New Order Product"
 
-    fill_in "Order", with: @order_product.Order_id
-    fill_in "Productname", with: @order_product.productName
-    fill_in "Productprice", with: @order_product.productPrice
+    fill_in "Label", with: @order_product.label
+    fill_in "Order", with: @order_product.order_id
+    fill_in "Price unit", with: @order_product.price_unit
+    fill_in "Qty", with: @order_product.qty
     click_on "Create Order product"
 
     assert_text "Order product was successfully created"
@@ -27,9 +28,10 @@ class OrderProductsTest < ApplicationSystemTestCase
     visit order_products_url
     click_on "Edit", match: :first
 
-    fill_in "Order", with: @order_product.Order_id
-    fill_in "Productname", with: @order_product.productName
-    fill_in "Productprice", with: @order_product.productPrice
+    fill_in "Label", with: @order_product.label
+    fill_in "Order", with: @order_product.order_id
+    fill_in "Price unit", with: @order_product.price_unit
+    fill_in "Qty", with: @order_product.qty
     click_on "Update Order product"
 
     assert_text "Order product was successfully updated"

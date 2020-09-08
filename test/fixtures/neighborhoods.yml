@@ -4,10 +4,10 @@ one:
   label: MyString
   isActive: false
   isDelivery: false
-  City: one
+  city: one
 
 two:
   label: MyString
   isActive: false
   isDelivery: false
-  City: two
+  city: two

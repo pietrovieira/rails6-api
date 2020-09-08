@@ -14,10 +14,11 @@ class SubCategoriesTest < ApplicationSystemTestCase
     visit sub_categories_url
     click_on "New Sub Category"
 
-    check "Active" if @sub_category.active
     fill_in "Category", with: @sub_category.category_id
     fill_in "Description", with: @sub_category.description
+    check "Isactive" if @sub_category.isActive
     fill_in "Label", with: @sub_category.label
+    fill_in "Slug", with: @sub_category.slug
     click_on "Create Sub category"
 
     assert_text "Sub category was successfully created"
@@ -28,10 +29,11 @@ class SubCategoriesTest < ApplicationSystemTestCase
     visit sub_categories_url
     click_on "Edit", match: :first
 
-    check "Active" if @sub_category.active
     fill_in "Category", with: @sub_category.category_id
     fill_in "Description", with: @sub_category.description
+    check "Isactive" if @sub_category.isActive
     fill_in "Label", with: @sub_category.label
+    fill_in "Slug", with: @sub_category.slug
     click_on "Update Sub category"
 
     assert_text "Sub category was successfully updated"

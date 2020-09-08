@@ -2,10 +2,12 @@
 
 one:
   label: MyString
-  active: false
+  slug: MyString
+  isActive: false
   description: MyText
 
 two:
   label: MyString
-  active: false
+  slug: MyString
+  isActive: false
   description: MyText

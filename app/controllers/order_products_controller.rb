@@ -1,4 +1,5 @@
 class OrderProductsController < ApplicationController
+  before_action :authorize_request
   before_action :set_order_product, only: [:show, :edit, :update, :destroy]
 
   # GET /order_products
@@ -69,6 +70,6 @@ class OrderProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_product_params
-      params.require(:order_product).permit(:productName, :productPrice, :Order_id)
+      params.require(:order_product).permit(:order_id, :label, :price_unit, :qty)
     end
 end

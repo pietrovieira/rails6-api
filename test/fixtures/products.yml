@@ -2,14 +2,16 @@
 
 one:
   title: MyString
-  subTitle: MyString
-  priceBefore: 9.99
+  sub_title: MyString
+  price_before: 9.99
   price: 9.99
+  sub_category: one
   description: MyText
 
 two:
   title: MyString
-  subTitle: MyString
-  priceBefore: 9.99
+  sub_title: MyString
+  price_before: 9.99
   price: 9.99
+  sub_category: two
   description: MyText

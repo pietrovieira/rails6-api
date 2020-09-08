@@ -5,26 +5,24 @@
   <%= @product.title %>
 </p>
 
-<% if @product.picture.attached? %>
 <p>
-  <strong>picture:</strong>
-  <%= image_tag @product.picture %>
-</p>
-<% end %>
-
-<p>
-  <strong>Subtitle:</strong>
-  <%= @product.subTitle %>
+  <strong>Sub title:</strong>
+  <%= @product.sub_title %>
 </p>
 
 <p>
-  <strong>Pricebefore:</strong>
-  <%= @product.priceBefore %>
+  <strong>Price before:</strong>
+  <%= @product.price_before %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
+</p>
+
+<p>
+  <strong>Sub category:</strong>
+  <%= @product.sub_category_id %>
 </p>
 
 <p>

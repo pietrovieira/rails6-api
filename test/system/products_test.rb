@@ -16,8 +16,9 @@ class ProductsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @product.description
     fill_in "Price", with: @product.price
-    fill_in "Pricebefore", with: @product.priceBefore
-    fill_in "Subtitle", with: @product.subTitle
+    fill_in "Price before", with: @product.price_before
+    fill_in "Sub category", with: @product.sub_category_id
+    fill_in "Sub title", with: @product.sub_title
     fill_in "Title", with: @product.title
     click_on "Create Product"
 
@@ -31,8 +32,9 @@ class ProductsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @product.description
     fill_in "Price", with: @product.price
-    fill_in "Pricebefore", with: @product.priceBefore
-    fill_in "Subtitle", with: @product.subTitle
+    fill_in "Price before", with: @product.price_before
+    fill_in "Sub category", with: @product.sub_category_id
+    fill_in "Sub title", with: @product.sub_title
     fill_in "Title", with: @product.title
     click_on "Update Product"
 

@@ -2,10 +2,16 @@
 
 one:
   total: 9.99
+  discount: 9.99
+  shipping: 9.99
   status: MyString
-  Person: one
+  status_payment: MyString
+  user: one
 
 two:
   total: 9.99
+  discount: 9.99
+  shipping: 9.99
   status: MyString
-  Person: two
+  status_payment: MyString
+  user: two

@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :productName %>
-    <%= form.text_field :productName %>
+    <%= form.label :order_id %>
+    <%= form.text_field :order_id %>
   </div>
 
   <div class="field">
-    <%= form.label :productPrice %>
-    <%= form.text_field :productPrice %>
+    <%= form.label :label %>
+    <%= form.text_field :label %>
   </div>
 
   <div class="field">
-    <%= form.label :Order_id %>
-    <%= form.text_field :Order_id %>
+    <%= form.label :price_unit %>
+    <%= form.text_field :price_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.number_field :qty %>
   </div>
 
   <div class="actions">
