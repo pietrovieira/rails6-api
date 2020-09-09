@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 scope 'api' do 
   scope 'v1' do
+    resources :charges
     resources :user_infos
     resources :sub_category_neighborhoods
     resources :products

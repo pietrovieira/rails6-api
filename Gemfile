@@ -60,3 +60,5 @@ gem "faker", "~> 2.13"
 
 gem "redcarpet", "~> 3.5"
 gem "rack-cors", "~> 1.1"
+
+gem "stripe", "~> 5.25"
