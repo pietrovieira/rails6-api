@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_130735) do
+ActiveRecord::Schema.define(version: 2020_09_09_214302) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -104,14 +104,17 @@ ActiveRecord::Schema.define(version: 2020_09_08_130735) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
+    t.string "slug"
     t.string "sub_title"
     t.decimal "price_before", precision: 8, scale: 2
     t.decimal "price", precision: 8, scale: 2
     t.bigint "sub_category_id", null: false
+    t.bigint "user_info_id", null: false
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["sub_category_id"], name: "index_products_on_sub_category_id"
+    t.index ["user_info_id"], name: "index_products_on_user_info_id"
   end
 
   create_table "sub_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -138,6 +141,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_130735) do
   create_table "user_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
+    t.string "slug"
     t.string "indentifyId"
     t.date "birthday"
     t.boolean "isActive"
@@ -179,6 +183,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_130735) do
   add_foreign_key "order_shippings", "orders"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "sub_categories"
+  add_foreign_key "products", "user_infos"
   add_foreign_key "sub_categories", "categories"
   add_foreign_key "sub_category_neighborhoods", "neighborhoods"
   add_foreign_key "sub_category_neighborhoods", "sub_categories"

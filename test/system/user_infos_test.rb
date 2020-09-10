@@ -18,6 +18,7 @@ class UserInfosTest < ApplicationSystemTestCase
     fill_in "Indentifyid", with: @user_info.indentifyId
     check "Isactive" if @user_info.isActive
     fill_in "Name", with: @user_info.name
+    fill_in "Slug", with: @user_info.slug
     fill_in "User", with: @user_info.user_id
     click_on "Create User info"
 
@@ -33,6 +34,7 @@ class UserInfosTest < ApplicationSystemTestCase
     fill_in "Indentifyid", with: @user_info.indentifyId
     check "Isactive" if @user_info.isActive
     fill_in "Name", with: @user_info.name
+    fill_in "Slug", with: @user_info.slug
     fill_in "User", with: @user_info.user_id
     click_on "Update User info"
 

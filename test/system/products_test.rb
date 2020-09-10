@@ -17,9 +17,11 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Description", with: @product.description
     fill_in "Price", with: @product.price
     fill_in "Price before", with: @product.price_before
+    fill_in "Slug", with: @product.slug
     fill_in "Sub category", with: @product.sub_category_id
     fill_in "Sub title", with: @product.sub_title
     fill_in "Title", with: @product.title
+    fill_in "User info", with: @product.user_info_id
     click_on "Create Product"
 
     assert_text "Product was successfully created"
@@ -33,9 +35,11 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Description", with: @product.description
     fill_in "Price", with: @product.price
     fill_in "Price before", with: @product.price_before
+    fill_in "Slug", with: @product.slug
     fill_in "Sub category", with: @product.sub_category_id
     fill_in "Sub title", with: @product.sub_title
     fill_in "Title", with: @product.title
+    fill_in "User info", with: @product.user_info_id
     click_on "Update Product"
 
     assert_text "Product was successfully updated"

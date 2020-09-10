@@ -17,7 +17,7 @@ class UserInfosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user_info" do
     assert_difference('UserInfo.count') do
-      post user_infos_url, params: { user_info: { birthday: @user_info.birthday, indentifyId: @user_info.indentifyId, isActive: @user_info.isActive, name: @user_info.name, user_id: @user_info.user_id } }
+      post user_infos_url, params: { user_info: { birthday: @user_info.birthday, indentifyId: @user_info.indentifyId, isActive: @user_info.isActive, name: @user_info.name, slug: @user_info.slug, user_id: @user_info.user_id } }
     end
 
     assert_redirected_to user_info_url(UserInfo.last)
@@ -34,7 +34,7 @@ class UserInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user_info" do
-    patch user_info_url(@user_info), params: { user_info: { birthday: @user_info.birthday, indentifyId: @user_info.indentifyId, isActive: @user_info.isActive, name: @user_info.name, user_id: @user_info.user_id } }
+    patch user_info_url(@user_info), params: { user_info: { birthday: @user_info.birthday, indentifyId: @user_info.indentifyId, isActive: @user_info.isActive, name: @user_info.name, slug: @user_info.slug, user_id: @user_info.user_id } }
     assert_redirected_to user_info_url(@user_info)
   end
 

@@ -4,9 +4,9 @@ resources :charges
 
 scope 'api' do 
   scope 'v1' do
-    resources :user_infos
     resources :sub_category_neighborhoods
     resources :products
+    resources :user_infos
     resources :sub_categories
     resources :categories
     resources :orders

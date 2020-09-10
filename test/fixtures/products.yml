@@ -2,16 +2,20 @@
 
 one:
   title: MyString
+  slug: MyString
   sub_title: MyString
   price_before: 9.99
   price: 9.99
   sub_category: one
+  user_info: one
   description: MyText
 
 two:
   title: MyString
+  slug: MyString
   sub_title: MyString
   price_before: 9.99
   price: 9.99
   sub_category: two
+  user_info: two
   description: MyText
